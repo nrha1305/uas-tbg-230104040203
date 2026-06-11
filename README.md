@@ -51,7 +51,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-###45. Jalankan Spark Pipeline
+###4. Jalankan Spark Pipeline
 
 ```bash
 python3 generate_pipeline.py
@@ -66,7 +66,7 @@ Output yang harus muncul:
 - lokasi folder parquet berhasil dibuat
 - validasi jumlah row parquet
 
-### 6. Cek file parquet untuk screenshot
+### 5. Cek file parquet untuk screenshot
 
 ```bash
 find "$(pwd)/output" -type f -name "*.parquet" -print
@@ -78,7 +78,7 @@ Bisa juga cek struktur folder:
 tree output
 ```
 
-### 7. Jalankan Dashboard Streamlit
+### 6. Jalankan Dashboard Streamlit
 
 ```bash
 streamlit run app.py --server.address 0.0.0.0 --server.port 8501
@@ -88,12 +88,6 @@ Buka browser:
 
 ```text
 http://localhost:8501
-```
-
-Jika memakai server kampus, gunakan IP server:
-
-```text
-http://IP-SERVER:8501
 ```
 
 ## Screenshot yang Perlu Dikumpulkan
