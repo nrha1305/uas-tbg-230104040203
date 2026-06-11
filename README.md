@@ -2,10 +2,10 @@
 
 ## Identitas
 
-- NIM  : 230104040203
-- NAMA : NOR HAYATI
-- KELAS: TI23A
-- NIM akhir: 3, ganjil
+- NIM        : 230104040203
+- NAMA        : NOR HAYATI
+- KELAS        : TI23A
+- NIM akhir    : 3, ganjil
 - Soal: Smart Retail Visitor Prediction System
 - Pipeline: Visitor Tracking -> Spark Aggregation -> Parquet -> ML Forecasting -> Streamlit Dashboard
 
