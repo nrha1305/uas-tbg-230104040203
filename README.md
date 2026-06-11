@@ -16,7 +16,6 @@ uas-tbg-230104040203/
 ├── app.py
 ├── generate_pipeline.py
 ├── requirements.txt
-├── README_STEPS.md
 └── output/
     ├── visitor_total/
     ├── visitor_time/
@@ -38,28 +37,21 @@ mkdir -p ~/bigdata-project/uas-tbg-230104040203
 cd ~/bigdata-project/uas-tbg-230104040203
 ```
 
-### 2. Install Java dan virtual environment
-
-```bash
-sudo apt update
-sudo apt install -y openjdk-17-jdk python3-venv
-```
-
-### 3. Buat dan aktifkan virtual environment
+### 2. Buat dan aktifkan virtual environment
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 4. Install library Python
+### 3. Install library Python
 
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### 5. Jalankan Spark Pipeline
+###45. Jalankan Spark Pipeline
 
 ```bash
 python3 generate_pipeline.py
