@@ -132,11 +132,13 @@ http://IP-SERVER:8501
 
 ## Analisis Jam Sibuk Pengunjung
 
-Analisis jam sibuk diambil dari dataset `visitor_time`, yaitu hasil agregasi Spark berdasarkan zona dan window waktu 15 menit. Pada dashboard, sistem memilih baris dengan nilai `visitor_count` tertinggi untuk zona yang dipilih. Nilai tertinggi tersebut ditampilkan sebagai jam tersibuk.
+Analisis jam sibuk pengunjung dilakukan berdasarkan hasil agregasi data visitor tracking per 15 menit. Data yang digunakan berasal dari tiga zona pusat perbelanjaan, yaitu FoodCourt, FashionArea, dan Cinema. Setiap data memiliki informasi timestamp, zone, dan visitor_count. Sesuai ketentuan soal, data pengunjung dibuat selama 180 menit dengan jumlah pengunjung random antara 10 sampai 500 orang. Hasil agregasi kemudian disimpan dalam format Parquet dan digunakan untuk menampilkan tren pengunjung pada dashboard Streamlit.
 
-Contoh narasi analisis:
+Berdasarkan hasil pengolahan data menggunakan PySpark, total pengunjung tertinggi terdapat pada zona FashionArea dengan jumlah 48.037 pengunjung. Zona Cinema memiliki total 45.262 pengunjung, sedangkan FoodCourt memiliki total 44.476 pengunjung. Meskipun FashionArea memiliki total pengunjung terbesar, jam sibuk tertinggi secara keseluruhan justru terjadi pada zona Cinema.
 
-> Berdasarkan hasil agregasi tren pengunjung per 15 menit, zona yang dipilih memiliki kepadatan tertinggi pada rentang waktu yang muncul di KPI Jam Tersibuk. Rentang waktu tersebut menunjukkan periode dengan konsentrasi pengunjung paling tinggi, sehingga pengelola pusat perbelanjaan dapat menambah petugas, mengatur alur antrean, dan meningkatkan kesiapan layanan pada zona tersebut.
+Hasil analisis tren per 15 menit menunjukkan bahwa zona Cinema mengalami kepadatan tertinggi pada pukul 09:45 sampai 10:00 dengan jumlah 5.223 pengunjung. Zona FoodCourt mengalami jam tersibuk pada pukul 10:00 sampai 10:15 dengan jumlah 4.465 pengunjung. Sementara itu, FashionArea mencapai puncak kepadatan pada pukul 10:30 sampai 10:45 dengan jumlah 4.423 pengunjung.
+
+Dari hasil tersebut, dapat disimpulkan bahwa setiap zona memiliki pola kepadatan yang berbeda. Cinema cenderung mengalami lonjakan lebih awal, FoodCourt meningkat setelahnya, sedangkan FashionArea mencapai puncak kepadatan menjelang pertengahan waktu observasi. Informasi ini dapat digunakan oleh pengelola pusat perbelanjaan untuk mengatur penempatan petugas, mengantisipasi antrean, meningkatkan pengawasan, dan menyiapkan layanan tambahan pada zona yang mengalami lonjakan pengunjung.
 
 ## Catatan Penting
 
