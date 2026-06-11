@@ -3,9 +3,8 @@
 ## Identitas
 
 - NIM        : 230104040203
-- NAMA        : NOR HAYATI
-- KELAS        : TI23A
-- NIM akhir    : 3, ganjil
+- NAMA       : NOR HAYATI
+- KELAS      : TI23A
 - Soal: Smart Retail Visitor Prediction System
 - Pipeline: Visitor Tracking -> Spark Aggregation -> Parquet -> ML Forecasting -> Streamlit Dashboard
 
@@ -51,7 +50,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-###4. Jalankan Spark Pipeline
+### 4. Jalankan Spark Pipeline
 
 ```bash
 python3 generate_pipeline.py
@@ -110,6 +109,7 @@ http://localhost:8501
    - grafik tren pengunjung
    - prediksi Linear Regression
    - analisis jam sibuk
+     
 <img width="1919" height="1017" alt="Screenshot 2026-06-11 103950" src="https://github.com/user-attachments/assets/bd8d397c-8cd3-4043-bb1f-f539bd07fc19" />
 
 <img width="1919" height="1013" alt="Screenshot 2026-06-11 104009" src="https://github.com/user-attachments/assets/3fb44272-bcd4-4ff2-aef6-96125ce2c9be" />
@@ -125,11 +125,3 @@ Berdasarkan hasil pengolahan data menggunakan PySpark, total pengunjung tertingg
 Berdasarkan hasil agregasi tren pengunjung per 15 menit, jam tersibuk terjadi pada zona Cinema pukul 09:45 sampai 10:00 dengan jumlah 5.223 pengunjung. Pada zona FoodCourt, kepadatan tertinggi terjadi pukul 10:00 sampai 10:15 dengan jumlah 4.465 pengunjung. Sementara itu, FashionArea mencapai puncak pengunjung pada pukul 10:30 sampai 10:45 dengan jumlah 4.423 pengunjung. Hasil ini menunjukkan bahwa setiap zona memiliki waktu puncak yang berbeda, sehingga pengelola pusat perbelanjaan perlu menyesuaikan jumlah petugas, pengaturan antrean, dan kesiapan layanan berdasarkan pola kepadatan masing-masing zona.
 
 Dari hasil tersebut, dapat disimpulkan bahwa setiap zona memiliki pola kepadatan yang berbeda. Cinema cenderung mengalami lonjakan lebih awal, FoodCourt meningkat setelahnya, sedangkan FashionArea mencapai puncak kepadatan menjelang pertengahan waktu observasi. Informasi ini dapat digunakan oleh pengelola pusat perbelanjaan untuk mengatur penempatan petugas, mengantisipasi antrean, meningkatkan pengawasan, dan menyiapkan layanan tambahan pada zona yang mengalami lonjakan pengunjung.
-
-## Catatan Penting
-
-- Output utama memakai Parquet, bukan CSV.
-- Path output memakai absolute path dengan `Path(__file__).resolve()`.
-- Machine Learning memakai Linear Regression dari Scikit-Learn.
-- Visualisasi dashboard memakai Plotly.
-- Dashboard interaktif karena memiliki sidebar filter zona dan slider jam prediksi.
