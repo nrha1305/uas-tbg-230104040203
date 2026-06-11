@@ -107,13 +107,28 @@ http://IP-SERVER:8501
 ## Screenshot yang Perlu Dikumpulkan
 
 1. Screenshot terminal saat `python3 generate_pipeline.py` berhasil.
-2. Screenshot folder/file parquet dari perintah `find "$(pwd)/output" -type f -name "*.parquet" -print`.
-3. Screenshot dashboard Streamlit yang menampilkan:
+<img width="1918" height="1188" alt="Screenshot 2026-06-11 104358" src="https://github.com/user-attachments/assets/ebc72691-130c-4050-9087-8b5168ff0127" />
+
+2. Screenshot terminal saat `SPARK` berhasil.
+<img width="1919" height="1193" alt="Screenshot 2026-06-11 104340" src="https://github.com/user-attachments/assets/fe2756e1-5e44-4529-86fb-4ef01f8446dc" />
+
+3. Screenshot SPARK.
+<img width="1919" height="1141" alt="Screenshot 2026-06-11 103129" src="https://github.com/user-attachments/assets/8e6c38f9-15b3-44e3-aba0-1882a0181656" />
+
+4. Screenshot folder/file parquet dari perintah `find "$(pwd)/output" -type f -name "*.parquet" -print`.
+<img width="1919" height="1199" alt="Screenshot 2026-06-11 104418" src="https://github.com/user-attachments/assets/90de0fa1-27d4-4504-a4b0-e78c59395112" />
+
+5. Screenshot dashboard Streamlit yang menampilkan:
    - filter zona
    - KPI total pengunjung
    - grafik tren pengunjung
    - prediksi Linear Regression
    - analisis jam sibuk
+<img width="1919" height="1017" alt="Screenshot 2026-06-11 103950" src="https://github.com/user-attachments/assets/bd8d397c-8cd3-4043-bb1f-f539bd07fc19" />
+
+<img width="1919" height="1013" alt="Screenshot 2026-06-11 104009" src="https://github.com/user-attachments/assets/3fb44272-bcd4-4ff2-aef6-96125ce2c9be" />
+
+<img width="1919" height="999" alt="Screenshot 2026-06-11 104020" src="https://github.com/user-attachments/assets/f69ec828-2be6-4596-bd7d-10b213bf21ac" />
 
 ## Analisis Jam Sibuk Pengunjung
 
